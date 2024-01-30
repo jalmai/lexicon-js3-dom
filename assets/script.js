@@ -11,17 +11,18 @@ console.log(description[0].getAttribute("font-size"));
 let img = document.getElementsByTagName("img");
 console.log(img[0].getAttribute("alt"));
 // 5. What is the dimensions and the url of the image? Create an object that looks like this, and log it to the console:
-
-// ```js
-// {
-//   url: string
-//   height: number,
-//   width: number,
-// }
-// ```
+let imgobj = {
+  url: img[0].getAttribute("src"),
+  height: img[0].height,
+  width: img[0].width,
+};
+console.log(imgobj);
 
 // 6. How many ingredients has the paste?
+let ingrPaste = document.getElementsByClassName("ingredients-list-paste");
+console.log(ingrPaste[0].getElementsByTagName("li").length);
 // 7. Which is the forth element in the list containing the ingredients for the paste?
+
 // 8. Create an an array of objects from the instructions. Each element in the array should be an object that looks like this:
 
 // ```js
