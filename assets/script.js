@@ -20,10 +20,25 @@ console.log(imgobj);
 
 // 6. How many ingredients has the paste?
 let ingrPaste = document.getElementsByClassName("ingredients-list-paste");
-console.log(ingrPaste[0].getElementsByTagName("li").length);
+let a = ingrPaste[0].getElementsByTagName("li");
+console.log(a.length);
 // 7. Which is the forth element in the list containing the ingredients for the paste?
-
+console.log(a[3]);
 // 8. Create an an array of objects from the instructions. Each element in the array should be an object that looks like this:
+let instruction = document.getElementsByClassName("instructions-list");
+let b = instruction[0].getElementsByTagName("li");
+let c = Array.from(b);
+let instrArr = [];
+let count = 1;
+c.forEach((element) => {
+  let singleInstr = {
+    order: count,
+    text: element,
+  };
+  instrArr.push(singleInstr);
+  count++;
+});
+console.log(instrArr);
 
 // ```js
 // {
